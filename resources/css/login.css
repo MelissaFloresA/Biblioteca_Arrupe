@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+body {
+    font-family: "Baloo 2";
+    margin: 0;
+    padding: 0;
+    background: url('/images/fondo_login.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden; /* sin scroll en escritorio */
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+    padding: 2rem;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.letras {
+    color: rgb(195, 12, 12);
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    line-height: 1.2; /* Controla la altura de línea (opcional) */
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    margin-top: 0.2rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.left-panel,
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.right-panel .logo img {
+    max-width: 350px;
+    height: auto;
+    display: block;
+}
+
+.login-box {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem;
+    padding-top: 1rem;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.login-box h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/*imputs*/
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+    border: 1px solid #000000; 
+    outline: none; /* Elimina el resaltado por defecto en algunos navegadores */
+}
+
+
+/* boton entrar*/
+button {
+    width: auto;
+    padding: 0.75rem 2rem;
+    background-color: #181717;
+    color: white;
+    border: 2px solid transparent; /* Borde transparente inicial */
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    font-weight: normal;
+    box-sizing: border-box; /* ¡Clave! Incluye el borde en el ancho total */
+}
+
+button:hover {
+    background-color: transparent;
+    color: #181717;
+    border: 2px solid #000000; /* Ahora no afecta el tamaño */
+    font-weight: bold;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 1rem;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    body {
+        overflow-y: auto; /* scroll en móviles */
+    }
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .login-box {
+        max-width: 90%;
+        min-height: 400px;
+    }
+    .letras {
+        text-align: left;
+        font-size: 0.8rem;
+    }
+    .right-panel .logo img {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    }
+    .title{
+        font-size: 2rem;
+    }
+}
+
